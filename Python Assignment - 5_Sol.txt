@@ -1,0 +1,187 @@
+Python Assignment - 5
+
+1. What does an empty dictionary&#39;s code look like?
+
+Sol: Dictionaries are mutable data structures that allow you to store key-value pairs. Dictionary can be created using the dict()
+     constructor or curly braces' {}'.
+
+Syntax :- empty_dict = {}
+
+Eg - empty_dict = {}  # This creates an empty dictionary
+ 
+    # Adding key-value pairs
+    empty_dict['name'] = 'John'
+    empty_dict['age'] = 30
+
+    print(empty_dict)  # Output: {'name': 'John', 'age': 30}
+
+2. What is the value of a dictionary value with the key 'foo' and the value 42?
+
+Sol: The value of a dictionary value with the key 'foo' and the value 42:-
+
+  my_dict = {'foo': 42}
+
+  Eg- value_of_foo = my_dict['foo']
+      print(value_of_foo)  # Output: 42 
+
+3. What is the most significant distinction between a dictionary and a list?
+
+Sol: The most significant distinction between a dictionary and a list:-
+
+ 1.Data Storage:
+
+  List: A list is an ordered collection of elements that can contain duplicate values. It is an ordered sequence, and each element in the
+  list is accessed by its index (a numerical value representing its position in the list). Lists are defined using square brackets [ ].
+
+ 2.Accessing Elements:
+
+   List: Elements in a list are accessed using numerical indexes. For example, to access the first element of a list, you use list_name[0],
+   and to access the second element, you use list_name[1], and so on.
+
+ 3.Ordering:
+
+  List: Lists maintain the order of elements as they are inserted, allowing you to access elements based on their positions in the list.
+
+  Eg- # List example
+     my_list = [10, 20, 30, 40, 50]
+     print(my_list[2])  # Output: 30
+
+  Eg- # Dictionary example
+     my_dict = {'foo': 42, 'bar': 24, 'baz': 10}
+     print(my_dict['bar'])  # Output: 24
+
+
+4. What happens if you try to access spam[&#39;foo&#39;] if spam is {&#39;bar&#39;: 100}?
+
+ Sol: Spam['foo'] where spam is the dictionary { 'bar': 100 }, you will encounter a KeyError. 
+      This is because the key 'foo' does not exist in the spam dictionary.
+
+ Eg- spam = {'bar': 100}
+
+    try:
+      value = spam['foo']
+      print(value)
+    except KeyError as e:
+      print(f"KeyError: {e}")
+
+  Output : KeyError: 'foo'
+
+
+5. If a dictionary is stored in spam, what is the difference between the expressions 'cat'; in spam and
+   'cat'; in spam.keys()?
+
+Sol: The expressions 'cat' in spam and 'cat' in spam.keys() are both used to check if the key 'cat' is present in the dictionary spam.
+
+ 1.'cat' in spam:
+
+   This expression checks if the key 'cat' exists in the dictionary spam. If the key 'cat' is present as one of the keys in the dictionary,
+   it will return True. Otherwise, it will return False.
+
+2.cat' in spam.keys():
+
+  This expression first accesses the keys() method of the dictionary spam. The keys() method returns a view object that contains all the keys 
+  present in the dictionary.
+
+ Eg - spam = {'cat': 42, 'dog': 23, 'bird': 10}
+
+   # Check if 'cat' exists in the dictionary
+     print('cat' in spam)           # Output: True
+     print('cat' in spam.keys())    # Output: True
+
+   # Check if 'elephant' exists in the dictionary
+     print('elephant' in spam)      # Output: False
+     print('elephant' in spam.keys())   # Output: False
+
+
+6.If a dictionary is stored in spam, what is the difference between the expressions 'cat'; in spam and 'cat'; in spam.values()?
+
+Sol: The expressions 'cat' in spam and 'cat' in spam.values() are used to check if the value 'cat' is present in the dictionary spam.
+
+ 1. cat' in spam:
+
+  This expression checks if the key 'cat' exists in the dictionary spam, not the value. It will return True if the key 'cat' is one of
+  the keys in the dictionary spam. Otherwise, it will return False.
+
+2.'cat' in spam.values():
+
+   This expression first accesses the values() method of the dictionary spam. The values() method returns a view object that contains all
+   the values present in the dictionary.
+
+  Eg- spam = {'name': 'John', 'age': 30, 'animal': 'cat'}
+
+      # Check if 'cat' exists as a key in the dictionary
+      print('cat' in spam)           # Output: False
+
+      # Check if 'cat' exists as a value in the dictionary
+      print('cat' in spam.values())  # Output: True
+
+     # Check if 'John' exists as a value in the dictionary
+     print('John' in spam.values()) # Output: True
+
+7. What is a shortcut for the following code?
+
+ if 'color'; not in spam:
+ spam['color'] = 'black';
+
+Sol: We can use dict.setdefault() as a shortcut for the given code:-
+
+   Eg- spam.setdefault('color', 'black')
+
+This line of code is equivalent to the original code:-
+
+  Eg- if 'color' not in spam:
+      spam['color'] = 'black'
+
+8. How do you &quot;pretty print&quot; dictionary values using which module and function?
+
+Sol: To pretty print dictionary values in Python, you can use the pprint module (Pretty Print). The pprint module provides a function 
+     called pprint() that displays complex data structures, such as dictionaries, in a more readable and formatted way. This is especially
+     useful when dealing with nested or large dictionaries.
+
+ Eg- import pprint
+
+   my_dict = {
+    'name': 'John',
+    'age': 30,
+    'address': {
+        'city': 'New York',
+        'country': 'USA',
+    }
+}
+
+   print.pprint(my_dict)
+
+Output: {'address': {'city': 'New York', 'country': 'USA'},
+        'age': 30,
+        'name': 'John'}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+
